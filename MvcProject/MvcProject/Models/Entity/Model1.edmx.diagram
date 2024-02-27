@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e40aee79d774d8fa1d96f087b954be8" Name="Diagram1">
+        <EntityTypeShape EntityType="DbEntityModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvAbout" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvContact" Width="1.5" PointX="2" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvEducation" Width="1.5" PointX="4" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvLanguage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvSkills" Width="1.5" PointX="5.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEntityModel.CvSocialMedia" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,37 @@
+﻿@using MvcProject.Models.Entity
+@model List<Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+
+    <h1 class="mt-4">ADMIN SECTION</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th> ID</th>
+            <th> Name </th>
+            <th>password</th>          
+            <th>Edit</th>
+
+        </tr>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.user_Id</th>
+                    <td>@item.userName</td>
+                    <td>@item.pass</td>
+                   
+
+                    <td><a href="/About/EditAbout/@item.user_Id" class="btn btn-success">EDIT</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    
+</div>
+
+

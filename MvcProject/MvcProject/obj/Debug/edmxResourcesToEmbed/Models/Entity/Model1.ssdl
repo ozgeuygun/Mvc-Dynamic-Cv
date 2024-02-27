@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbEntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="user_Id" />
+    </Key>
+    <Property Name="user_Id" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="pass" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CvAbout">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="20" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="CvContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLName" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="10" />
+    <Property Name="Title" Type="nchar" MaxLength="10" />
+    <Property Name="M_Description" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CvEducation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="University" Type="varchar" MaxLength="50" />
+    <Property Name="DegreeProg" Type="varchar" MaxLength="50" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CvLanguage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LSkillName" Type="varchar" MaxLength="20" />
+    <Property Name="Llevel" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CvSkills">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkillName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CvSocialMedia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sname" Type="varchar" MaxLength="20" />
+    <Property Name="Link" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DbEntityModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvAbout" EntityType="Self.CvAbout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvContact" EntityType="Self.CvContact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvEducation" EntityType="Self.CvEducation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvLanguage" EntityType="Self.CvLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvSkills" EntityType="Self.CvSkills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvSocialMedia" EntityType="Self.CvSocialMedia" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

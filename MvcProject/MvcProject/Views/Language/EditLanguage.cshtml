@@ -1,0 +1,25 @@
+﻿@model MvcProject.Models.Entity.CvLanguage
+@{
+    ViewBag.Title = "EditLanguage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Language", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.LSkillName)
+        @Html.TextBoxFor(m => m.LSkillName, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Llevel)
+        @Html.TextBoxFor(m => m.Llevel, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <button class="btn btn-warning">EDIT</button>
+    </div>
+}
+

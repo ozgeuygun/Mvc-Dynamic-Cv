@@ -1,0 +1,30 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvSocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th>Social Media </th>
+        <th>Link </th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.Sname</td>
+                <td>@item.Link</td>
+                <td><a href="/Social/Delete/@item.Id" class="btn btn-danger">DELETE</a></td>
+                <td><a href="/Social/EditSocial/@item.Id" class="btn btn-success">EDIT</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Social/AddSocial" class="btn btn-primary">Add Social Media</a>
+

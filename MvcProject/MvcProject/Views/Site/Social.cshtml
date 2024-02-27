@@ -1,0 +1,33 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvSocialMedia>
+@{
+    ViewBag.Title = "Social";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section class="resume-section" id="skills">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Social Media</h2>
+      
+        <ul class="list-inline dev-icons">
+            <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+            <li class="list-inline-item"><i class="fa-brands fa-github"></i></li>
+            
+        </ul>
+       
+        <ul class="fa-ul mb-0">
+            @foreach(var item in Model) { 
+            <li>
+                <span class="fa-li"><i class="fa-solid fa-square"></i></span>
+                @item.Sname
+                @item.Link
+            </li>
+           
+           
+            }
+        </ul>
+    </div>
+</section>
+<hr class="m-0" />

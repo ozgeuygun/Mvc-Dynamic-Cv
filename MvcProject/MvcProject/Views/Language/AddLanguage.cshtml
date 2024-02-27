@@ -1,0 +1,18 @@
+﻿@model MvcProject.Models.Entity.CvLanguage
+@{
+    ViewBag.Title = "AddLanguage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Language</label>
+        <input type="text" class="form-control" name="LSkillName" />
+        <label>Level</label>
+        <input type="text" class="form-control" name="Llevel" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">ADD</button>
+    </div>
+</form>
+

@@ -1,0 +1,21 @@
+﻿@model MvcProject.Models.Entity.CvSocialMedia
+@{
+    ViewBag.Title = "AddSocial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+
+        <label>Social Media</label>
+        <input type="text" class="form-control" name="Sname" />
+        <br />
+        <label>Link</label>
+        <input type="text" class="form-control" name="Link" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">ADD</button>
+    </div>
+</form>
+
+

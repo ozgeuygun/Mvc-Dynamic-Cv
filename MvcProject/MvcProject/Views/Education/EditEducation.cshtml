@@ -1,0 +1,29 @@
+﻿@model MvcProject.Models.Entity.CvEducation
+@{
+    ViewBag.Title = "EditEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Education", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.University)
+        @Html.TextBoxFor(m => m.University, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.DegreeProg)
+        @Html.TextBoxFor(m => m.DegreeProg, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Department)
+        @Html.TextBoxFor(m => m.Department, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">EDIT</button>
+    </div>
+}

@@ -1,0 +1,24 @@
+﻿@model MvcProject.Models.Entity.CvSocialMedia
+@{
+    ViewBag.Title = "EditSocial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Social", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Sname)
+        @Html.TextBoxFor(m => m.Sname, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Link)
+        @Html.TextBoxFor(m => m.Link, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">EDIT</button>
+    </div>
+}
+

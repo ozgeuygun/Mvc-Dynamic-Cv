@@ -1,0 +1,32 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvLanguage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th>Language </th>
+        <th>Language Proficiency Levels</th>
+        <th>Delete</th>
+        <th>Edit</th>
+
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.LSkillName</td>
+                <td>@item.Llevel</td>
+                <td><a href="/Language/Delete/@item.Id" class="btn btn-danger">DELETE</a></td>
+                <td><a href="/Language/EditLanguage/@item.Id" class="btn btn-success">EDIT</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Language/AddLanguage" class="btn btn-primary">Add Language</a>
+
+

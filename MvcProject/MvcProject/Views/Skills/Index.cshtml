@@ -1,0 +1,30 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvSkills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th>Skills </th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.SkillName</td>
+                <td><a href="/Skills/Delete/@item.Id" class="btn btn-danger">DELETE</a></td>
+                <td><a href="/Skills/EditSkills/@item.Id" class="btn btn-success">EDIT</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Skills/AddSkills" class="btn btn-primary">Add Skill</a>
+
+
+

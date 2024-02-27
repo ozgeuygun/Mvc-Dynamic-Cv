@@ -1,0 +1,29 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvContact>
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Contact</h2>
+        <form method="post">
+            <label>Name</label>
+            <input type="text" class="form-control" name="FLName" />
+
+            <label>Email</label>
+            <input type="text" class="form-control" name="Email" />
+
+            <label>Title</label>
+            <input type="text" class="form-control" name="Title" />
+
+            <label>Description</label>
+            <input type="text" class="form-control" name="M_Description" />
+            <br />
+            <button class="btn btn-info">Send</button>
+        </form>
+    </div>
+</section>
+<hr class="m-0" />

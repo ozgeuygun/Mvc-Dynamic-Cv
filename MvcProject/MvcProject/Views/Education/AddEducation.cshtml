@@ -1,0 +1,27 @@
+﻿@model MvcProject.Models.Entity.CvEducation
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>University</label>
+        <input type="text" class="form-control" name="University" />
+
+        <label>Degree Programming</label>
+        <input type="text" class="form-control" name="DegreeProg" />
+
+        <label>Department</label>
+        <input type="text" class="form-control" name="Department" />
+
+        <label>Date</label>
+        <input type="text" class="form-control" name="Date" />
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info">ADD</button>
+    </div>
+</form>
+
+

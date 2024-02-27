@@ -1,0 +1,34 @@
+﻿@using MvcProject.Models.Entity
+@model List<CvAbout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th>First Name </th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Description</th>
+        <th>Edit</th>
+
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Email</td>
+                <td>@item.Description</td>
+
+                <td><a href="/About/EditAbout/@item.Id" class="btn btn-success">EDIT</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
